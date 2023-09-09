@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Java课程笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JAVA笔记">
+<meta property="og:url" content="http://example.com/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="krrrr&#39;s blogs">
+<meta property="og:description" content="Java课程笔记">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922163749894.png">
+<meta property="og:image" content="http://example.com/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922163732442.png">
+<meta property="og:image" content="http://example.com/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922163845488.png">
+<meta property="og:image" content="http://example.com/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922162752198.png">
+<meta property="og:image" content="http://example.com/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922163946922.png">
+<meta property="og:image" content="http://example.com/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922165047801.png">
+<meta property="og:image" content="http://example.com/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922165555715.png">
+<meta property="og:image" content="http://example.com/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922165709920.png">
+<meta property="og:image" content="http://example.com/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922165740837.png">
+<meta property="og:image" content="http://example.com/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922170855957.png">
+<meta property="og:image" content="http://example.com/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922170926976.png">
+<meta property="og:image" content="http://example.com/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922171003414.png">
+<meta property="og:image" content="http://example.com/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922171051161.png">
+<meta property="og:image" content="http://example.com/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922170345313.png">
+<meta property="og:image" content="http://example.com/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922170650725.png">
+<meta property="og:image" content="http://example.com/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922170748859.png">
+<meta property="og:image" content="http://example.com/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922171933613.png">
+<meta property="og:image" content="http://example.com/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922172844815.png">
+<meta property="article:published_time" content="2021-09-22T07:57:00.000Z">
+<meta property="article:modified_time" content="2022-04-10T08:15:52.865Z">
+<meta property="article:author" content="EsteeX">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922163749894.png">
+
+<link rel="canonical" href="http://example.com/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>JAVA笔记 | krrrr's blogs</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">krrrr's blogs</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">我是小鱼游游游</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">8</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">4</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">18</span></a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/mypic.JPG">
+      <meta itemprop="name" content="EsteeX">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="krrrr's blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          JAVA笔记
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-22 15:57:00" itemprop="dateCreated datePublished" datetime="2021-09-22T15:57:00+08:00">2021-09-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-10 16:15:52" itemprop="dateModified" datetime="2022-04-10T16:15:52+08:00">2022-04-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">课程笔记</span></a>
+                </span>
+            </span>
+
+          
+            <div class="post-description">Java课程笔记</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">y = 9.97</span><br><span class="line">int x = (int)y;</span><br><span class="line">--&gt;x = 9</span><br><span class="line">int x = (int)Math.round(y);</span><br><span class="line">--&gt;x = 10</span><br></pre></td></tr></table></figure>
+<ul>
+<li>java需要给强制的类型转换（否则会报错）</li>
+<li>浮点数运算不精准 1.0-0.9 不会得到0.1. 所以不要用来做条件判断</li>
+<li>boolean类型true/false 不能用来和0/1做比较</li>
+<li>switch 可以int char string byte short 不能boolean long</li>
+</ul>
+<h2 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h2><p>Exponent Methods</p>
+<p><img src="/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922163749894.png" alt="image-20210922163749894" style="zoom:33%;"></p>
+<p>Trigonometric Methods</p>
+<p><img src="/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922163732442.png" alt="image-20210922163732442" style="zoom:30%;"></p>
+<p>Rounding Methods</p>
+<p><img src="/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922163845488.png" alt="image-20210922163845488" style="zoom:33%;"></p>
+<p><img src="/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922162752198.png" alt="image-20210922162752198" style="zoom:50%;"></p>
+<p>min, max, and abs</p>
+<p><img src="/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922163946922.png" alt="image-20210922163946922" style="zoom:33%;"></p>
+<p>Math.random()  [0.1)</p>
+<p>Math.random()*100 [0,100)</p>
+<ul>
+<li>注释中不能加\u，意思是开新的一行</li>
+</ul>
+<h2 id="Character"><a href="#Character" class="headerlink" title="Character"></a>Character</h2><p>Unicode 编码方式</p>
+<p>16bits（2 bytes）前缀为\u</p>
+<p>‘\u0000’ to ‘\uFFFF’.</p>
+<p>需要注意注释中的“\u”，例如: // \u000A is a newline</p>
+<p>// Look inside c:\users 会出现语法错误，因为\u后并不是4个十六进制数</p>
+<p><img src="/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922165047801.png" alt="image-20210922165047801" style="zoom:30%;"></p>
+<p>ASCII Character Set is a subset of the Unicode from \u0000 to \u007f</p>
+<p><img src="/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922165555715.png" alt="image-20210922165555715" style="zoom:33%;"></p>
+<p><img src="/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922165709920.png" alt="image-20210922165709920" style="zoom:33%;"></p>
+<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><p>字符串是Java中的对象。上表中的方法只能从特定字符串实例调用<br>因此,。这些方法称为<strong>实例方法</strong><br>非实例方法称为<strong>静态方法</strong>。可以在不使用对象的情况下调用静态方法。<strong>Math类中定义的所有方法都是静态方法</strong>。它们不绑定到特定的对象实例。调用实例方法的语法是</p>
+<p><img src="/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922165740837.png" alt="image-20210922165740837" style="zoom:33%;"></p>
+<p><img src="/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922170855957.png" alt="image-20210922170855957" style="zoom:33%;"></p>
+<p><img src="/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922170926976.png" alt="image-20210922170926976" style="zoom:33%;"></p>
+<p><img src="/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922171003414.png" alt="image-20210922171003414" style="zoom:33%;"></p>
+<p><img src="/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922171051161.png" alt="image-20210922171051161" style="zoom:33%;"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">String s3 = s1.concat(s2); or String s3 = s1 + s2;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Three strings are concatenated</span></span><br><span class="line">String message = <span class="string">&quot;Welcome &quot;</span> + <span class="string">&quot;to &quot;</span> + <span class="string">&quot;Java&quot;</span>;</span><br><span class="line"><span class="comment">// String Chapter is concatenated with number 2</span></span><br><span class="line">String s = <span class="string">&quot;Chapter&quot;</span> + <span class="number">2</span>; <span class="comment">// s becomes Chapter2</span></span><br><span class="line"><span class="comment">// String Supplement is concatenated with character B</span></span><br><span class="line">String s1 = <span class="string">&quot;Supplement&quot;</span> + <span class="string">&#x27;B&#x27;</span>; <span class="comment">// s1 becomes SupplementB</span></span><br></pre></td></tr></table></figure>
+<p>控制台字符串的输入</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Scanner input = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">System.out.print(<span class="string">&quot;Enter three words separated by spaces: &quot;</span>);</span><br><span class="line">String s1 = input.next();</span><br><span class="line">String s2 = input.next();</span><br><span class="line">String s3 = input.next();</span><br><span class="line">System.out.println(<span class="string">&quot;s1 is &quot;</span> + s1);</span><br><span class="line">System.out.println(<span class="string">&quot;s2 is &quot;</span> + s2);</span><br><span class="line">System.out.println(<span class="string">&quot;s3 is &quot;</span> + s3)</span><br></pre></td></tr></table></figure>
+<p>控制台字符输入</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Scanner input = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">System.out.print(<span class="string">&quot;Enter a character: &quot;</span>);</span><br><span class="line">String s = input.nextLine();</span><br><span class="line"><span class="keyword">char</span> ch = s.charAt(<span class="number">0</span>);</span><br><span class="line">System.out.println(<span class="string">&quot;The character entered is &quot;</span> + ch);</span><br></pre></td></tr></table></figure>
+<p><img src="/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922170345313.png" alt="image-20210922170345313" style="zoom:33%;"></p>
+<p>特殊情况</p>
+<p><img src="/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922170650725.png" alt="image-20210922170650725" style="zoom: 25%;"></p>
+<p>解决方法next()</p>
+<p><img src="/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922170748859.png" alt="image-20210922170748859" style="zoom:33%;"></p>
+<h3 id="字符串和数字之间的转换"><a href="#字符串和数字之间的转换" class="headerlink" title="字符串和数字之间的转换"></a>字符串和数字之间的转换</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> intValue = Integer.parseInt(intString);</span><br><span class="line"><span class="keyword">double</span> doubleValue = Double.parseDouble(doubleString);</span><br><span class="line"></span><br><span class="line">String s = number + <span class="string">&quot;&quot;</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="格式输出"><a href="#格式输出" class="headerlink" title="格式输出"></a>格式输出</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.printf(format, items);</span><br></pre></td></tr></table></figure>
+<p><img src="/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922171933613.png" alt="image-20210922171933613" style="zoom:33%;"></p>
+<p><img src="/2021/09/22/JAVA%E7%AC%94%E8%AE%B0/image-20210922172844815.png" alt="image-20210922172844815" style="zoom:50%;"></p>
+<h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><h3 id="类的生命周期"><a href="#类的生命周期" class="headerlink" title="类的生命周期"></a>类的生命周期</h3><p>第一次new创建一个类的对象，或访问静态变量/方法是，java将类加载进内存，为这个类分配一块空间，直到程序结束</p>
+<h3 id="对象的生命周期"><a href="#对象的生命周期" class="headerlink" title="对象的生命周期"></a>对象的生命周期</h3><p>new一个对象时，被分配一块空间</p>
+<p>Java对象是按照值传递的（不是饮用传递）</p>
+<h3 id="不可修改的类"><a href="#不可修改的类" class="headerlink" title="不可修改的类"></a>不可修改的类</h3><p>1、不可变类<br>（1）不可变类是指这个类的实例一旦创建完成后，就不能改变其成员变量值，也就是不能改变对象的状态。<br>（2）Java 中八个基本类型的包装类和 String 类都属于不可变类，而其他的大多数类都属于可变类。<br>（3）不可变对象是线程安全的。<br>2、如何设计不可变类？<br>（1）<strong>类</strong>声明为<strong>final</strong>，不可以被继承。<br>（2）所有<strong>成员变量</strong>定义为私有和final（<strong>private final</strong>）。<br>（3）不提供改变成员变量的方法。</p>
+<p>（4）通过构造器初始化成员，若构造器传入引用数据类型需要进行<strong>深拷贝</strong>。-&gt;</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">ImmutableDemo</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span>[] myArray;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ImmutableDemo</span><span class="params">(<span class="keyword">int</span>[] array)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">this</span>.myArray = array; <span class="comment">// wrong  </span></span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>错误——array和myArray存储在同一段空间，改变arrat，myArray也会被修改</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">MyImmutableDemo</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span>[] myArray;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyImmutableDemo</span><span class="params">(<span class="keyword">int</span>[] array)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">this</span>.myArray = array.clone(); <span class="comment">// right </span></span><br><span class="line">    &#125;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>正确</p>
+<p>3、String对象的不可变性的优点<br>（1）线程安全。<br>（2）字符串常量池的需要。<br>只有当字符串是不可变的，字符串池才有可能实现。字符串常量池可以将一些字符常量放在常量池中重复使用，避免每次都重新创建相同的对象、节省存储空间。<br>（3）字符串很适合作为Map中的key。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/09/19/%E8%AE%A1%E7%BD%91%E7%AC%94%E8%AE%B0/" rel="prev" title="计网笔记">
+      <i class="fa fa-chevron-left"></i> 计网笔记
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/09/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E7%AC%94%E8%AE%B0/" rel="next" title="计算机图形学笔记">
+      计算机图形学笔记 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text">基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Math"><span class="nav-number">1.1.</span> <span class="nav-text">Math</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Character"><span class="nav-number">1.2.</span> <span class="nav-text">Character</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String"><span class="nav-number">1.3.</span> <span class="nav-text">String</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%95%B0%E5%AD%97%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="nav-number">1.3.1.</span> <span class="nav-text">字符串和数字之间的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%BC%E5%BC%8F%E8%BE%93%E5%87%BA"><span class="nav-number">1.3.2.</span> <span class="nav-text">格式输出</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB"><span class="nav-number">1.4.</span> <span class="nav-text">类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="nav-number">1.4.1.</span> <span class="nav-text">类的生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="nav-number">1.4.2.</span> <span class="nav-text">对象的生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E5%8F%AF%E4%BF%AE%E6%94%B9%E7%9A%84%E7%B1%BB"><span class="nav-number">1.4.3.</span> <span class="nav-text">不可修改的类</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="EsteeX"
+      src="/images/mypic.JPG">
+  <p class="site-author-name" itemprop="name">EsteeX</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">EsteeX</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
